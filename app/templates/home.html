@@ -6,7 +6,7 @@
 {% include 'navbar.html' %}
 
 <div class=" mainbox">
-    <div class="bgimg"><img src="/app/images/homebg.webp" alt="" srcset="" style="width: -webkit-fill-available;"></div>
+    <div class="bgimg"><img id="image" src="/app/images/homebg.webp" alt="" srcset="" style="width: -webkit-fill-available;"></div>
     <div class="container fade_in">
         <h2>Scrape smarter, rise faster </h2>
         <h2>than competitors.</h2>
@@ -105,5 +105,17 @@
     }
 </script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from("img", {
+      scale: 0.9,
+      scrollTrigger: {
+        trigger: "#image",
+        scrub: true,
+        end: "+=700"
+      }
+    });
+    </script>
 
 {% endblock %}
