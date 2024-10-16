@@ -19,12 +19,16 @@
             <option value="rating_high_to_low">Rating High to Low</option>
             <option value="rating_low_to_high">Rating Low to High</option>
         </select>
-        <button type="submit">Sort</button>
-        <button type="submit" name="reset" value="true">Reset Sorting</button>
+        <button type="submit" style="padding: 10px 24px; background-color: #1f80e0; color: #fff; border: none; border-radius: 5px; cursor: pointer; margin-right: 10px;" title="Sort products">
+            <i class="fas fa-sort"></i> <!-- Sort Icon -->
+        </button>
+        <button type="submit" name="reset" value="true" style="padding: 10px 20px; background-color: #e53935; color: #fff; border: none; border-radius: 5px; cursor: pointer;" title="Reset products">
+            <i class="fas fa-sync-alt"></i> <!-- Reset Icon -->
+        </button>
     </form>
 
     <!-- Table Container -->
-    <div class="table-container">
+    <div class="table-container table-striped table-dark">
         <div class="table-wrapper">
             {{ table_html|safe }}
         </div>
